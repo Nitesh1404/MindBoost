@@ -6,11 +6,31 @@
 Embark on a transformative web development journey with a focus on creating immersive solutions in the Health and Fitness domain.
 
 ## Screenshots of UI
-![image](https://github.com/Nitesh1404/MindBoost/assets/134856916/0a98a6fd-440a-4ff2-bb76-68b7ffb5714e)
-![image](https://github.com/Nitesh1404/MindBoost/assets/134856916/14578cdf-8c2e-435f-9442-8f1fd3f2517d)
+
+
+
 ![image](https://github.com/Nitesh1404/MindBoost/assets/134856916/d2c7987b-0da1-4ce3-a1d0-ab4ca0c4b55b)
 ![image](https://github.com/Nitesh1404/MindBoost/assets/134856916/323f6b0d-4015-4af4-bae7-022048b13b7e)
+![image](https://github.com/Nitesh1404/MindBoost/assets/134856916/14578cdf-8c2e-435f-9442-8f1fd3f2517d)
 ![image](https://github.com/Nitesh1404/MindBoost/assets/134856916/240d70bc-fa62-4cd7-b59d-33015aff3e9d)
+![image](https://github.com/Nitesh1404/MindBoost/assets/134856916/1295b30f-a1e5-4f3b-9b99-4efd162812e3)
+![image](https://github.com/Nitesh1404/MindBoost/assets/134856916/0a98a6fd-440a-4ff2-bb76-68b7ffb5714e)
+
+
+
+## Admin Panel
+
+
+
+![image](https://github.com/Nitesh1404/MindBoost/assets/134856916/0fedcce0-6b7e-4557-8503-27d09f2a8fe6)
+![image](https://github.com/Nitesh1404/MindBoost/assets/134856916/f4b42564-80aa-41ee-8860-78446a01ee04)
+![image](https://github.com/Nitesh1404/MindBoost/assets/134856916/7e4f24a5-fc2a-4750-9275-f15a41d93683)
+![image](https://github.com/Nitesh1404/MindBoost/assets/134856916/6ac89ab7-ed58-40f2-8b52-3c99c36c3798)
+
+
+
+
+
 
 
 
