@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+{% load static  %}
+<html lang="en">
+
+<head>
+	<title>MindBoost</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="{% static 'customeCSS/disorder.css' %}">
+
+	<link href= "https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.timepicker.css' %}">
+
+
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+   <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html"><span class="flaticon-lotus"></span>MindBoost</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item active"><a href="{% url 'index' %}" class="nav-link" style="font-weight:500; font-size:1.3rem;">Home</a></li>
+	          <li class="nav-item"><a href="{% url 'disorders' %}" class="nav-link" style="font-weight:500; font-size:1.3rem;">Disorder</a></li>
+				<li class="nav-item"><a href="{% url 'yoga' %}" class="nav-link" style="font-weight:500; font-size:1.3rem;">Yoga</a></li>
+<!--	          <li class="nav-item"><a href="{% url 'about' %}" class="nav-link" style="font-weight:500; font-size:1.3rem;">About</a></li>-->
+	          <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link" style="font-weight:500; font-size:1.3rem;">Contact</a></li>
+			  {% if user.is_authenticated %}
+				<li class="nav-item"><a href="index.html" class="nav-link" style="font-weight:500; font-size:1.3rem;">Welcome {{user.username}}</a></li>
+				<li class="nav-item"><a href="{% url 'meeting' %}" class="nav-link" style="font-weight:500; font-size:1.3rem;">Consultation</a></li>
+				<li class="nav-item"><a href="{% url 'user_logout' %}" class="nav-link" style="font-weight:500; font-size:1.3rem;">Logout</a></li>
+				{% else %}
+				<li class="nav-item"><a href="{% url 'user_login' %}" class="nav-link" style="font-weight:500; font-size:1.3rem;">Login</a></li>
+				<li class="nav-item"><a href="{% url 'user_register' %}" class="nav-link" style="font-weight:500; font-size:1.3rem;">Register</a></li>
+				<li class="nav-item"><a href="{% url 'meeting' %}" class="nav-link" style="font-weight:500; font-size:1.3rem;">Consultation</a></li>
+				{% endif %}
+			</ul>
+	      </div>
+		  </div>
+	  </nav>
+	<!-- END nav -->
+
+	<section class="hero-wrap js-fullheight" style="background-image: url({% static 'images/bg_3.jpg' %});">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+				<div class="col-md-9 ftco-animate text-center">
+					<h1 class="mb-3 bread">Yoga</h1>
+					<p class="breadcrumbs"><span class="mr-2"><a href="{% url 'index' %}">Home</a></span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+  	
+    <!-- END nav -->
+
+    <section class="ftco-section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 d-flex align-items-stretch">
+                    <div class="offer-deal text-center">
+                        <div class="img" style="background-image: url({% static 'images/classes-6.jpg' %});"></div>
+                        <div class="text mt-4">
+                            <h3 class="mb-4">Power Yoga</h3>
+                            <p class="mb-5">Power yoga is a dynamic and fitness-focused style that combines strength, flexibility, and breath awareness through flowing sequences. It's adaptable for various skill levels.</p>
+                        
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 d-flex align-items-stretch">
+                    <div class="offer-deal text-center">
+                        <div class="img" style="background-image: url({% static 'images/classes-1.jpg' %});"></div>
+                        <div class="text mt-4">
+                            <h3 class="mb-4">Unity Session</h3>
+                            <p class="mb-5">Unity Session in yoga fosters a welcoming community environment, promoting inclusivity and well-being through shared practice, regardless of experience levels.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 d-flex align-items-stretch">
+                    <div class="offer-deal text-center">
+                        <div class="img" style="background-image: url({% static 'images/classes-7.jpg' %});"></div>
+                        <div class="text mt-4">
+                            <h3 class="mb-4">Foundation Yoga</h3>
+                            <p class="mb-5">Foundation Yoga: A beginner-friendly practice focusing on essential poses and principles to build strength, flexibility, and mindfulness for all levels.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 d-flex align-items-stretch">
+                    <div class="offer-deal text-center">
+                        <div class="img" style="background-image: url({% static 'images/classes-2.jpg' %});"></div>
+                        <div class="text mt-4">
+                            <h3 class="mb-4">Prenatal Yoga</h3>
+                            <p class="mb-5">Prenatal Yoga: Gentle, safe, and designed for expectant mothers, it enhances flexibility, eases discomfort, and promotes overall well-being during pregnancy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+      <div class="col-md-12 heading-section ftco-animate text-center">
+        <h2 class="mb-1">Experience of Yoga</h2>
+      </div>
+    </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="services-2 ftco-animate d-flex w-100">
+                        <div class="icon d-flex justify-content-center align-items-center order-md-last">
+                            <span class="flaticon-stone"></span>
+                        </div>
+                        <div class="text text-md-right pl-4 pl-md-0 pr-md-4">
+                            <h3>Balance Body &amp; Mind</h3>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                        </div>
+                    </div>
+                    <div class="services-2 ftco-animate d-flex w-100">
+                        <div class="icon d-flex justify-content-center align-items-center order-md-last">
+                            <span class="flaticon-stone"></span>
+                        </div>
+                        <div class="text text-md-right pl-4 pl-md-0 pr-md-4">
+                            <h3>Healthy Daily Life</h3>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                        </div>
+                    </div>
+                    <div class="services-2 ftco-animate d-flex w-100">
+                        <div class="icon d-flex justify-content-center align-items-center order-md-last">
+                            <span class="flaticon-stone"></span>
+                        </div>
+                        <div class="text text-md-right pl-4 pl-md-0 pr-md-4">
+                            <h3>Improves your flexibility</h3>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                        </div>
+                    </div>
+                    <div class="services-2 ftco-animate d-flex w-100">
+                        <div class="icon d-flex justify-content-center align-items-center order-md-last">
+                            <span class="flaticon-mediation">
+                            </span>
+                        </div>
+                        <div class="text text-md-right pl-4 pl-md-0 pr-md-4">
+                            <h3>Protects your spine</h3>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="col-md-4 d-flex">
+                <div class="img img-services w-100" style="background-image: url({% static 'images/services.jpg' %});"></div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="services-2 ftco-animate d-flex w-100">
+                        <div class="icon d-flex justify-content-center align-items-center\">
+                            <span class="flaticon-stone"></span>
+                        </div>
+                        <div class="text text-left pl-4">
+                            <h3>Betters your bone health</h3>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                        </div>
+                    </div>
+                    <div class="services-2 ftco-animate d-flex w-100">
+                        <div class="icon d-flex justify-content-center align-items-center\">
+                            <span class="flaticon-stone"></span>
+                        </div>
+                        <div class="text text-left pl-4">
+                            <h3>Increases your blood flow</h3>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                        </div>
+                    </div>
+                    <div class="services-2 ftco-animate d-flex w-100">
+                        <div class="icon d-flex justify-content-center align-items-center\">
+                            <span class="flaticon-stone"></span>
+                        </div>
+                        <div class="text text-left pl-4">
+                            <h3>Keep a practice journal</h3>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                        </div>
+                    </div>
+                    <div class="services-2 ftco-animate d-flex w-100">
+                        <div class="icon d-flex justify-content-center align-items-center\">
+                            <span class="flaticon-stone"></span>
+                        </div>
+                        <div class="text text-left pl-4">
+                            <h3>Builds muscle strength</h3>
+                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-12 heading-section ftco-animate text-center">
+            <h2 class="mb-1">Complete Wellbeing Yoga</h2>
+          </div>
+        </div>
+    	<div class="container">
+        <div class="row">
+        	<div class="col-md-4">
+        		<div class="classes w-100 ftco-animate">
+        			<a href="#" class="img w-100 mb-3" style="background-image: url({% static 'img/anxiety.jpg' %});"></a>
+        			<div class="text w-100 text-center">
+        				<h3><a href="#">Private &amp; Group Lessons</a></h3>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="col-md-4">
+        		<div class="classes w-100 ftco-animate">
+        			<a href="#" class="img w-100 mb-3" style="background-image: url({% static 'images/classes-2.jpg' %});"></a>
+        			<div class="text w-100 text-center">
+        				<h3><a href="#">Yoga for Pregnant</a></h3>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="col-md-4">
+        		<div class="classes w-100 ftco-animate">
+        			<a href="#" class="img w-100 mb-3" style="background-image: url({% static 'images/classes-3.jpg' %});"></a>
+        			<div class="text w-100 text-center">
+        				<h3><a href="#">Yoga for Beginners</a></h3>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="col-md-4">
+        		<div class="classes w-100 ftco-animate">
+        			<a href="#" class="img w-100 mb-3" style="background-image: url({% static 'images/classes-4.jpg' %});"></a>
+        			<div class="text w-100 text-center">
+        				<h3><a href="#">Yoga Barre</a></h3>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="col-md-4">
+        		<div class="classes w-100 ftco-animate">
+        			<a href="#" class="img w-100 mb-3" style="background-image: url({% static 'images/classes-5.jpg' %});"></a>
+        			<div class="text w-100 text-center">
+        				<h3><a href="#">Yoga Core</a></h3>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="col-md-4">
+        		<div class="classes w-100 ftco-animate">
+        			<a href="#" class="img w-100 mb-3" style="background-image: url({% static 'images/classes-6.jpg' %});"></a>
+        			<div class="text w-100 text-center">
+        				<h3><a href="#">Yoga Restore</a></h3>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        </div>
+    	</div>
+    </section>
+
+
+	<footer class="ftco-footer ftco-section img">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row mb-5">
+				<div class="col-lg-3 col-md-6 mb-5 mb-md-5 ftco-animate">
+					<div class="ftco-footer-widget mb-4">
+						<h1 class="logo">MindBoost</h1>
+					</div>
+				</div>
+				<div class="col-lg col-md-6 mb-5 mb-md-5 ftco-animate">
+					<div class="ftco-footer-widget mb-4">
+						<h2 class="location">sector 4 , Vikas nagar , KoparKhairane , Navi Mumbai - 400709</h2>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 mb-5 mb-md-5">
+					<div class="ftco-footer-widget mb-4">
+						<ul class="ftco-footer-social list-unstyled float-md-left float-lft">
+							<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+							<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+							<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+
+					<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						Copyright &copy;
+						<script>document.write(new Date().getFullYear());</script> All rights reserved | MindBoost
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+   
+
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap-datepicker.js' %}"></script>
+  <script src="{% static 'js/jquery.timepicker.min.js' %}"></script>
+  <script src="{% static 'js/scrollax.min.js' %}"></script>
+  <script src="{% static 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false' %}"></script>
+  <script src="{% static 'js/google-map.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+	<script src="https://mediafiles.botpress.cloud/46ad0e49-458c-4cfe-9937-f6e77e300a95/webchat/config.js" defer></script>
+
+    
+  </body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+{% load static  %}
+<html lang="en">
+
+<head>
+	<title>Yogalax - Free Bootstrap 4 Template by Colorlib</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href= "https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.timepicker.css' %}">
+
+
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html"><span class="flaticon-lotus"></span>MindBoost</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item active"><a href="{% url 'index' %}" class="nav-link" style="font-weight:500; font-size:1.3rem;">Home</a></li>
+	          <li class="nav-item"><a href="{% url 'disorders' %}" class="nav-link" style="font-weight:500; font-size:1.3rem;">Disorder</a></li>
+				<li class="nav-item"><a href="{% url 'yoga' %}" class="nav-link" style="font-weight:500; font-size:1.3rem;">Yoga</a></li>
+<!--	          <li class="nav-item"><a href="{% url 'about' %}" class="nav-link" style="font-weight:500; font-size:1.3rem;">About</a></li>-->
+	          <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link" style="font-weight:500; font-size:1.3rem;">Contact</a></li>
+			  {% if user.is_authenticated %}
+				<li class="nav-item"><a href="index.html" class="nav-link" style="font-weight:500; font-size:1.3rem;">Welcome {{user.username}}</a></li>
+				<li class="nav-item"><a href="{% url 'meeting' %}" class="nav-link" style="font-weight:500; font-size:1.3rem;">Consultation</a></li>
+				<li class="nav-item"><a href="{% url 'user_logout' %}" class="nav-link" style="font-weight:500; font-size:1.3rem;">Logout</a></li>
+				{% else %}
+				<li class="nav-item"><a href="{% url 'user_login' %}" class="nav-link" style="font-weight:500; font-size:1.3rem;">Login</a></li>
+				<li class="nav-item"><a href="{% url 'user_register' %}" class="nav-link" style="font-weight:500; font-size:1.3rem;">Register</a></li>
+				<li class="nav-item"><a href="{% url 'meeting' %}" class="nav-link" style="font-weight:500; font-size:1.3rem;">Consultation</a></li>
+				{% endif %}
+			</ul>
+	      </div>
+		  </div>
+	  </nav>
+	<!-- END nav -->
+
+	<section class="hero-wrap js-fullheight" style="background-image: url({% static 'images/bg_3.jpg' %});">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+				<div class="col-md-9 ftco-animate text-center">
+					<h1 class="mb-3 bread">Disorders</h1>
+					<p class="breadcrumbs"><span class="mr-2"><a href="{% url 'index' %}">Home</a></span>
+						<!-- <span>Classes</span> -->
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-12 heading-section ftco-animate text-center">
+					<h3 class="subheading">Disorders</h3>
+					<h2 class="mb-1">Mental Health Disorders</h2>
+				</div>
+			</div>
+			<div class="row no-gutters">
+				<div class="col-md-6 col-lg-4">
+					<div class="package-program ftco-animate">
+						<a href="{% url 'anxiety' %}" class="img d-flex justify-content-center align-items-center"
+							style="background-image: url({% static 'img/anxietydis.jpg' %});">
+							<div class="text p-5 text-center">
+								<h3>Anxiety Disorders.</h3>
+								<p>Anxiety disorder: Excessive, persistent worry or fear affecting daily life; treatable
+									with therapy and/or medication.</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="package-program ftco-animate">
+						<a href="{% url 'mood' %}" class="img d-flex justify-content-center align-items-center"
+							style="background-image: url({% static 'img/mooddis.jpg' %});">
+							<div class="text p-5 text-center">
+								<h3>Mood Disorder</h3>
+								<p>Mood disorder: Disturbances in emotions, such as depression or bipolar disorder,
+									impacting a person's overall mood and well-being. Treatment may involve therapy and
+									medication.</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="package-program ftco-animate">
+						<a href="{% url 'psychotic' %}" class="img d-flex justify-content-center align-items-center"
+							style="background-image: url({% static 'img/psychoticdis.jpeg' %});">
+							<div class="text p-5 text-center">
+								<h3>psychotic Disorders</h3>
+								<p>Psychotic disorders: Severe mental conditions involving a loss of touch with reality,
+									marked by hallucinations, delusions, and impaired thinking. Treatment often includes
+									medication and therapy.</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="package-program ftco-animate">
+						<a href="{% url 'eating' %}" class="img d-flex justify-content-center align-items-center"
+							style="background-image: url({% static 'img/eatindis.jpg' %});">
+							<div class="text p-5 text-center">
+								<h3>Eating Disorders</h3>
+								<p>Eating disorder: Disrupted eating patterns leading to physical and mental health
+									issues; common types include anorexia nervosa, bulimia nervosa, and binge-eating
+									disorder. Treatment involves therapy and nutritional support.</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="package-program ftco-animate">
+						<a href="{% url 'personality' %}" class="img d-flex justify-content-center align-items-center"
+							style="background-image: url({% static 'img/personalitydis.jpg' %});">
+							<div class="text p-5 text-center">
+								<h3>personality Disorders</h3>
+								<p>Personality disorders: Persistent and inflexible patterns of thinking, feeling, and
+									behaving that deviate from cultural expectations, causing interpersonal and
+									functional difficulties. Treatment may involve therapy, but can be challenging due
+									to the enduring nature of the patterns..</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="package-program ftco-animate">
+						<a href="{% url 'neurodevelopment' %}" class="img d-flex justify-content-center align-items-center"
+							style="background-image: url({% static 'img/neurodevelopmentaldis.jpg' %});">
+							<div class="text p-5 text-center">
+								<h3>Neurodevelopmental Disorders</h3>
+								<p>Neurodevelopmental disorders: Conditions affecting the development of the nervous
+									system, leading to behavioral, cognitive, or social challenges. Examples include
+									autism spectrum disorder and attention-deficit/hyperactivity disorder (ADHD).
+									Treatment often involves behavioral interventions and support.</p>
+							</div>
+						</a>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-4">
+					<div class="package-program ftco-animate">
+						<a href="{% url 'dissociative' %}" class="img d-flex justify-content-center align-items-center"
+							style="background-image: url({% static 'img/dissociativedis.jpg' %});">
+							<div class="text p-5 text-center">
+								<h3>Dissociative Disorders</h3>
+								<p>Dissociative disorders: Mental health conditions involving a disconnection between
+									thoughts, identity, consciousness, and memory. Treatment may include psychotherapy to
+									address underlying trauma.</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="package-program ftco-animate">
+						<a href="{% url 'trauma' %}" class="img d-flex justify-content-center align-items-center"
+							style="background-image: url({% static 'img/Trauma-Disorders.jpg' %});">
+							<div class="text p-5 text-center">
+								<h3>Trauma and Stressor realted Disorders</h3>
+								<p>Trauma and Stressor-Related Disorders: Mental health conditions resulting from exposure
+									to traumatic or stressful events, such as post-traumatic stress disorder (PTSD).
+									Treatment involves therapy and support to address the impact of the experiences.</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="package-program ftco-animate">
+						<a href="{% url 'sleep' %}" class="img d-flex justify-content-center align-items-center"
+							style="background-image: url({% static 'img/sleepdis.jpg' %});">
+							<div class="text p-5 text-center">
+								<h3>sleep Disorders</h3>
+								<p>Sleep disorders: Conditions affecting the quality, timing, and duration of sleep, leading
+									to disturbances in the sleep-wake cycle. Examples include insomnia and sleep apnea.
+									Treatment varies and may include lifestyle changes, therapy, or medication.
+
+
+								</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="package-program ftco-animate">
+						<a href="{% url 'Substance_Disorders' %}" class="img d-flex justify-content-center align-items-center"
+							style="background-image: url({% static 'img/substancedis.jpg' %});">
+							<div class="text p-5 text-center">
+								<h3>Substance Related and Addictive Disorders</h3>
+								<p>Substance-Related and Addictive Disorders: Conditions characterized by problematic use of
+									substances,  consequences.
+									Treatment involves counseling, support groups, and sometimes medication.</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="package-program ftco-animate">
+						<a href="{% url 'neurocoginitive' %}" class="img d-flex justify-content-center align-items-center"
+							style="background-image: url({% static 'img/neurocongitivedis.jpg' %});">
+							<div class="text p-5 text-center">
+								<h3>Neurocognitive Disorders</h3>
+								<p>Neurocognitive disorders: Conditions involving cognitive decline, affecting memory,
+									thinking, and daily functioning. Examples include Alzheimer's disease. Treatment focuses
+									on managing symptoms and providing support.</p>
+							</div>
+						</a>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-4">
+					<div class="package-program ftco-animate">
+						<a href="{% url 'somatoform' %}" class="img d-flex justify-content-center align-items-center"
+							style="background-image: url({% static 'img/somatoform-disorder.png' %});">
+							<div class="text p-5 text-center">
+								<h3>somatoform Disorders</h3>
+								<p>Somatoform Disorders: Conditions where physical symptoms are present without a clear
+									medical explanation, often linked to psychological distress. Treatment typically
+									involves psychotherapy to address underlying emotional issues.</p>
+							</div>
+						</a>
+					</div>
+			</div>
+		</div>
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+	<footer class="ftco-footer ftco-section img">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row mb-5">
+				<div class="col-lg-3 col-md-6 mb-5 mb-md-5 ftco-animate">
+					<div class="ftco-footer-widget mb-4">
+						<h1 class="logo">MindBoost</h1>
+					</div>
+				</div>
+				<div class="col-lg col-md-6 mb-5 mb-md-5 ftco-animate">
+					<div class="ftco-footer-widget mb-4">
+						<h2 class="location">sector 4 , Vikas nagar , KoparKhairane , Navi Mumbai - 400709</h2>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 mb-5 mb-md-5">
+					<div class="ftco-footer-widget mb-4">
+						<ul class="ftco-footer-social list-unstyled float-md-left float-lft">
+							<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+							<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+							<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+
+					<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						Copyright &copy;
+						<script>document.write(new Date().getFullYear());</script> All rights reserved | MindBoost
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap-datepicker.js' %}"></script>
+  <script src="{% static 'js/jquery.timepicker.min.js' %}"></script>
+  <script src="{% static 'js/scrollax.min.js' %}"></script>
+  <script src="{% static 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false' %}"></script>
+  <script src="{% static 'js/google-map.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+	<script src="https://mediafiles.botpress.cloud/46ad0e49-458c-4cfe-9937-f6e77e300a95/webchat/config.js" defer></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+{% load static  %}
+<html lang="en">
+
+<head>
+	<title>MindBoost</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="{% static 'css/customeCSS/disorder.css' %}">
+
+	<link href= "https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.timepicker.css' %}">
+
+
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html"><span class="flaticon-lotus"></span>MindBoost</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item active"><a href="{% url 'index' %}" class="nav-link" style="font-weight:500; font-size:1.3rem;">Home</a></li>
+	          <li class="nav-item"><a href="{% url 'disorders' %}" class="nav-link" style="font-weight:500; font-size:1.3rem;">Disorder</a></li>
+				<li class="nav-item"><a href="{% url 'yoga' %}" class="nav-link" style="font-weight:500; font-size:1.3rem;">Yoga</a></li>
+<!--	          <li class="nav-item"><a href="{% url 'about' %}" class="nav-link" style="font-weight:500; font-size:1.3rem;">About</a></li>-->
+	          <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link" style="font-weight:500; font-size:1.3rem;">Contact</a></li>
+			  {% if user.is_authenticated %}
+				<li class="nav-item"><a href="index.html" class="nav-link" style="font-weight:500; font-size:1.3rem;">Welcome {{user.username}}</a></li>
+				<li class="nav-item"><a href="{% url 'meeting' %}" class="nav-link" style="font-weight:500; font-size:1.3rem;">Consultation</a></li>
+				<li class="nav-item"><a href="{% url 'user_logout' %}" class="nav-link" style="font-weight:500; font-size:1.3rem;">Logout</a></li>
+				{% else %}
+				<li class="nav-item"><a href="{% url 'user_login' %}" class="nav-link" style="font-weight:500; font-size:1.3rem;">Login</a></li>
+				<li class="nav-item"><a href="{% url 'user_register' %}" class="nav-link" style="font-weight:500; font-size:1.3rem;">Register</a></li>
+				<li class="nav-item"><a href="{% url 'meeting' %}" class="nav-link" style="font-weight:500; font-size:1.3rem;">Consultation</a></li>
+				{% endif %}
+			</ul>
+	      </div>
+		  </div>
+	  </nav>
+	<!-- END nav -->
+
+	<section class="hero-wrap js-fullheight" style="background-image: url({% static 'img/anxiety2.jpg' %});">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+				<div class="col-md-9 ftco-animate text-center">
+					<h1 class="mb-3 bread">Anxiety</h1>
+					<p class="breadcrumbs"><span class="mr-2"><a href="{% url 'index' %}">Home</a></span>
+						<span>Disorders</span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="ftco-section" style="padding: 1rem 0;">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-12 heading-section ftco-animate text-center">
+					<!-- <h3 class="subheading">Yoga Classes</h3> -->
+					<h2 class="mb-1">About Anxiety</h2>
+				</div>
+			</div>
+
+			<!-- cards -->
+			<div class="card info" style="width: 66rem;">
+				<div class="card-body">
+					<!-- <h5 class="card-title" style="font-weight:500;">Anxiety - Info</h5> -->
+					<!-- <h6 class="card-subtitle mb-2 text-body-secondary">Ca rd subtitle</h6> -->
+					<p class="card-text">Anxiety is a normal human emotion characterized by feelings of unease, worry,
+						or fear. It is a natural response to
+						stress or a perceived threat and can be a motivating factor that helps individuals deal with
+						challenging situations.
+						However, when anxiety becomes excessive, persistent, and interferes with daily life, it may be
+						classified as an anxiety
+						disorder.</p>
+
+					<p class="card-text">Anxiety disorders are a group of mental health conditions that include
+						generalized anxiety disorder (GAD), social
+						anxiety disorder, panic disorder, and various phobias. These disorders can manifest in both
+						physical and psychological
+						symptoms, such as restlessness, muscle tension, rapid heartbeat, difficulty concentrating, and
+						excessive worry. The
+						severity of anxiety can vary, ranging from mild and manageable to severe and debilitating.</p>
+
+					<p class="card-text">Several factors contribute to the development of anxiety disorders, including
+						genetic predisposition, brain chemistry,
+						personality, and life experiences. Effective treatment options for anxiety disorders often
+						include psychotherapy,
+						medications, or a combination of both. Additionally, lifestyle changes, stress management
+						techniques, and support from
+						friends and family can be beneficial in managing anxiety.</p>
+
+					<p class="card-text">It's important to note that experiencing occasional anxiety is a normal part of
+						life, and not all anxiety is indicative
+						of a disorder. However, if anxiety symptoms persist or significantly impact a person's quality
+						of life, it is advisable
+						to seek professional help for an accurate diagnosis and appropriate treatment.</p>
+
+					<br>
+
+					<h5 class="card-title" style="font-weight:500;">Anxiety - Types</h5>
+					<ul class="mt-5 do-list">
+						<li class="ftco-animate" style="color: #98ed9f;"><a href="#"><span
+									class="ion-ios-checkmark-circle mr-3"></span>Generalized Anxiety Disorder (GAD)</a>
+						</li>
+						<li class="ftco-animate"><a href="#"><span class="ion-ios-checkmark-circle mr-3"></span>Panic
+								Disorder</a></li>
+						<li class="ftco-animate"><a href="#"><span class="ion-ios-checkmark-circle mr-3"></span>Social
+								Anxiety Disorder (SAD)</a></li>
+						<li class="ftco-animate"><a href="#"><span class="ion-ios-checkmark-circle mr-3"></span>Specific
+								Phobias</a></li>
+						<li class="ftco-animate"><a href="#"><span
+									class="ion-ios-checkmark-circle mr-3"></span>Obsessive-Compulsive Disorder (OCD)</a>
+						</li>
+						<li class="ftco-animate"><a href="#"><span
+									class="ion-ios-checkmark-circle mr-3"></span>Post-Traumatic Stress Disorder
+								(PTSD)</a>
+						</li>
+					</ul>
+					<!-- <a href="#" class="card-link">Card link</a>
+					<a href="#" class="card-link">Another link</a> -->
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+	<section class="ftco-section" style="padding: 1rem 0;">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-12 heading-section ftco-animate text-center">
+					<!-- <h3 class="subheading">Yoga Classes</h3> -->
+					<h2 class="mb-1">Symptoms</h2>
+				</div>
+			</div>
+
+			<!-- cards -->
+
+			<div class="flex-container">
+
+
+
+				<div class="card" style="width: 30rem; margin: 1rem;">
+					<div class="card-body">
+						<h5 class="card-title" style="font-weight: 500;">Physical Symptoms</h5>
+						<!-- <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6> -->
+						<p class="card-text" style="font-size: 15px;">Physical symptoms of anxiety include increased
+							heart rate, muscle tension,
+							shallow breathing, sweating, trembling,
+							dizziness, upset stomach, headaches, fatigue, and insomnia.</p>
+						<!-- <a href="#" class="card-link">Card link</a>
+						<a href="#" class="card-link">Another link</a> -->
+					</div>
+				</div>
+
+
+				<div class="card" style="width: 30rem;margin: 1rem;">
+					<div class="card-body">
+						<h5 class="card-title" style="font-weight: 500">Emotional Symptoms</h5>
+						<!-- <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6> -->
+						<p class="card-text" style="font-size: 15px;">Emotional symptoms of anxiety encompass feelings
+							of restlessness,
+							irritability, fear, uneasiness, and a heightened sense
+							of apprehension or worry.</p>
+						<!-- <a href="#" class="card-link">Card link</a>
+						<a href="#" class="card-link">Another link</a> -->
+					</div>
+				</div>
+				<div class="card" style="width: 30rem;margin: 1rem;">
+					<div class="card-body">
+						<h5 class="card-title" style="font-weight: 500">Behavioral Symptoms</h5>
+						<!-- <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6> -->
+						<p class="card-text" style="font-size: 15px;">Behavioral symptoms of anxiety may include
+							avoidance of certain situations,
+							restlessness, pacing, nail-biting,
+							fidgeting, seeking reassurance, and difficulty concentrating.
+							.</p>
+						<!-- <a href="#" class="card-link">Card link</a>
+						<a href="#" class="card-link">Another link</a> -->
+					</div>
+				</div>
+				<div class="card" style="width: 30rem;margin: 1rem;">
+					<div class="card-body">
+						<h5 class="card-title" style="font-weight: 500">Cognitive symptoms</h5>
+						<!-- <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6> -->
+						<p class="card-text" style="font-size: 15px;">Cognitive symptoms of anxiety involve racing
+							thoughts, excessive worry,
+							fear of the worst outcome, trouble
+							concentrating, and a sense of impending doom or danger..</p>
+						<!-- <a href="#" class="card-link">Card link</a>
+						<a href="#" class="card-link">Another link</a> -->
+					</div>
+				</div>
+
+			</div>
+
+
+		</div>
+	</section>
+
+
+	<section class="ftco-section" style="padding: 1rem 0;">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-12 heading-section ftco-animate text-center">
+					<!-- <h3 class="subheading">Yoga Classes</h3> -->
+					<h2 class="mb-1">Remedies</h2>
+				</div>
+			</div>
+
+			<!-- cards -->
+
+			<div class="flex-container">
+
+				<ul class="mt-5 do-list" style="margin-right: 4rem;">
+					<li class="ftco-animate" style="color: #98ed9f;"><a href="#"><span
+								class="ion-ios-checkmark-circle mr-3"></span>Deep Breathing Exercises</a>
+					</li>
+					<li class="ftco-animate"><a href="#"><span class="ion-ios-checkmark-circle mr-3"></span>Regular
+							Exercises</a></li>
+					<li class="ftco-animate"><a href="#"><span class="ion-ios-checkmark-circle mr-3"></span>Mindfulness
+							and Meditation</a></li>
+					<li class="ftco-animate"><a href="#"><span class="ion-ios-checkmark-circle mr-3"></span>Adequate
+							Sleep</a></li>
+					<li class="ftco-animate"><a href="#"><span class="ion-ios-checkmark-circle mr-3"></span>Healthy
+							Diet</a>
+					</li>
+
+				</ul>
+
+				<ul class="mt-5 do-list">
+					<li class="ftco-animate" style="color: #98ed9f;"><a href="#"><span
+								class="ion-ios-checkmark-circle mr-3"></span>Limit Stimulants</a>
+					</li>
+					<li class="ftco-animate"><a href="#"><span class="ion-ios-checkmark-circle mr-3"></span>Stay
+							Hydrated</a></li>
+					<li class="ftco-animate"><a href="#"><span class="ion-ios-checkmark-circle mr-3"></span>Social
+							Support</a></li>
+					<li class="ftco-animate"><a href="#"><span class="ion-ios-checkmark-circle mr-3"></span>Create a
+							Relaxing Environment</a></li>
+					<li class="ftco-animate"><a href="#"><span class="ion-ios-checkmark-circle mr-3"></span>Limit
+							Information Overload</a>
+					</li>
+
+				</ul>
+
+
+
+
+			</div>
+
+
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<footer class="ftco-footer ftco-section img">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row mb-5">
+				<div class="col-lg-3 col-md-6 mb-5 mb-md-5 ftco-animate">
+					<div class="ftco-footer-widget mb-4">
+						<h1 class="logo">MindBoost</h1>
+					</div>
+				</div>
+				<div class="col-lg col-md-6 mb-5 mb-md-5 ftco-animate">
+					<div class="ftco-footer-widget mb-4">
+						<h2 class="location">sector 4 , Vikas nagar , KoparKhairane , Navi Mumbai - 400709</h2>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 mb-5 mb-md-5">
+					<div class="ftco-footer-widget mb-4">
+						<ul class="ftco-footer-social list-unstyled float-md-left float-lft">
+							<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+							<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+							<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+
+					<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						Copyright &copy;
+						<script>document.write(new Date().getFullYear());</script> All rights reserved | MindBoost
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap-datepicker.js' %}"></script>
+  <script src="{% static 'js/jquery.timepicker.min.js' %}"></script>
+  <script src="{% static 'js/scrollax.min.js' %}"></script>
+  <script src="{% static 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false' %}"></script>
+  <script src="{% static 'js/google-map.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+	<script src="https://mediafiles.botpress.cloud/46ad0e49-458c-4cfe-9937-f6e77e300a95/webchat/config.js" defer></script>
+
+</body>
+
+</html>

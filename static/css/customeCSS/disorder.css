@@ -1,0 +1,16 @@
+
+card-text {
+	color: black;
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	margin-top: -2rem;
+	margin-bottom: 2rem;
+}
+
+@media screen and (max-width:1024){
+background-color:red;
+}
