@@ -5,6 +5,18 @@
 ## Themes
 Embark on a transformative web development journey with a focus on creating immersive solutions in the Health and Fitness domain.
 
+## Screenshots of UI
+![image](https://github.com/Nitesh1404/MindBoost/assets/134856916/0a98a6fd-440a-4ff2-bb76-68b7ffb5714e)
+![image](https://github.com/Nitesh1404/MindBoost/assets/134856916/14578cdf-8c2e-435f-9442-8f1fd3f2517d)
+![image](https://github.com/Nitesh1404/MindBoost/assets/134856916/d2c7987b-0da1-4ce3-a1d0-ab4ca0c4b55b)
+![image](https://github.com/Nitesh1404/MindBoost/assets/134856916/323f6b0d-4015-4af4-bae7-022048b13b7e)
+![image](https://github.com/Nitesh1404/MindBoost/assets/134856916/240d70bc-fa62-4cd7-b59d-33015aff3e9d)
+
+
+
+
+
+
 ## [Video link](#) 
 https://drive.google.com/file/d/1B_h_HXB44U01D9VUoaYmESP7G-HR2Rxi/view?usp=sharing
 
@@ -106,6 +118,8 @@ MindBoost matters because it revolutionizes mental well-being by seamlessly inte
 
 - **Access MindBoost:**
   - Open your web browser and go to [http://127.0.0.1:8000/](http://127.0.0.1:8000/) to access MindBoost.
+
+##
 
 ## Documentation & Support
 
